@@ -1,0 +1,60 @@
+<!-- <div class="login">
+    <div class="auth-background"></div>
+  
+    <div class="form-container">
+      <div ><img class="logo-title" src="../../../assets/logo_rcu.png" /></div>
+  
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)" class="login-form">
+        <div class="mb-3 br-5">
+          <span class="p-float-label">
+            <input id="float-input"   type="text" pInputText formControlName="username" [ngClass]="{'ng-invalid ng-dirty':f['username']?.invalid && (f['username'].dirty || f['username'].touched)}" > 
+            <label>Name</label>
+        </span>
+          <div *ngIf="f['username']?.invalid && (f['username'].dirty || f['username'].touched)">
+            <small *ngIf="true" id="username2-help" class="p-error block">Name is required.</small>
+          </div>
+        </div>
+  
+        <div class=" mb-3">
+          <span class="p-float-label p-input-icon-right">
+            <i *ngIf="isPassHide" class="pi pi-eye" (click)="changePasswordType()"></i>
+            <i *ngIf="!isPassHide" class="pi pi-eye-slash" (click)="changePasswordType()"></i>
+            
+            <input id="float-input"   [type]="passType" pInputText  formControlName="password" [ngClass]="{'ng-invalid ng-dirty':f['password']?.invalid && (f['password'].dirty || f['password'].touched)}" > 
+            <label>Surname</label>
+           
+        </span>
+          <div *ngIf="f['password']?.invalid && (f['password'].dirty || f['password'].touched)">
+            <small *ngIf="true" id="username2-help" class="p-error block">Surname is required.</small>
+          </div>
+        </div>
+   
+        <div class=" mb-3">
+          <span class="p-float-label p-input-icon-right">
+            <i *ngIf="isPassHide" class="pi pi-eye" (click)="changePasswordType()"></i>
+            <i *ngIf="!isPassHide" class="pi pi-eye-slash" (click)="changePasswordType()"></i>
+            
+            <input id="float-input"   [type]="passType" pInputText  formControlName="password" [ngClass]="{'ng-invalid ng-dirty':f['password']?.invalid && (f['password'].dirty || f['password'].touched)}" > 
+            <label>Email</label>
+           
+        </span>
+          <div *ngIf="f['password']?.invalid && (f['password'].dirty || f['password'].touched)">
+            <small *ngIf="true" id="username2-help" class="p-error block">Email is required.</small>
+          </div>
+        </div>
+
+       
+  <div class="bottom-buttons">
+
+    <button type="submit" pButton routerLink="/register"></button>
+    <button type="submit" pButton routerLink="/register">Create Account</button>
+
+  </div> 
+   
+     
+      </form>
+  
+    </div>
+  
+  
+  </div> -->

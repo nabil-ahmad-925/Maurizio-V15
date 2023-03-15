@@ -1,0 +1,56 @@
+.request-top{
+   display: flex;
+   align-items: center;
+    .p-button-success,.p-button-primary{
+        width: 2rem;
+        height: 1rem;
+        
+     }
+     
+}
+.acordian-style{
+    width: 100% !important;
+}
+
+.bot{
+
+    margin-bottom:  20px !important;
+}
+
+.main-color{
+    color: #F59E0B;
+ }
+
+.task-details{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+    .each-task{
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 2vw 2vh 2vw;
+    .task-heading{
+        font-size: medium;
+        font-weight: bold;
+        color: #F59E0B;
+    }
+}
+
+
+    }
+
+.requesting-user{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+    .user{
+       display: flex;
+       flex-direction: column;
+       .user-heading{
+        font-size: medium;
+        font-weight: bold;
+        color: #F59E0B;
+       }
+    }
+}
+

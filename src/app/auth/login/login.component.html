@@ -1,0 +1,114 @@
+<div class="login">
+  <div class="auth-background"></div>
+
+  <div class="toaster">
+    <p-toast></p-toast>
+
+ 
+  </div>
+
+  <div class="form-container">
+    <div><img class="logo-title" src="../../../assets/logo_rcu.png" /></div>
+
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit(loginForm)"
+      class="login-form"
+    >
+      <div class="mb-3 br-5">
+        <span class="p-float-label">
+          <input
+            id="float-input"
+            type="text"
+            pInputText
+            formControlName="email"
+            [ngClass]="{
+              'ng-invalid ng-dirty':
+                f['email']?.invalid &&
+                (f['email'].dirty || f['email'].touched)
+            }"
+          />
+          <label>Email</label>
+        </span>
+        <div
+          *ngIf="
+            f['email']?.invalid &&
+            (f['email'].dirty || f['email'].touched)
+          "
+        >
+          <small *ngIf="true" id="username2-help" class="p-error block"
+            >Email is required.</small
+          >
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <span class="p-float-label p-input-icon-right">
+          <i
+            *ngIf="isPassHide"
+            class="pi pi-eye"
+            (click)="changePasswordType()"
+          ></i>
+          <i
+            *ngIf="!isPassHide"
+            class="pi pi-eye-slash"
+            (click)="changePasswordType()"
+          ></i>
+
+          <input
+            id="float-input"
+            [type]="passType"
+            pInputText
+            formControlName="password"
+            [ngClass]="{
+              'ng-invalid ng-dirty':
+                f['password']?.invalid &&
+                (f['password'].dirty || f['password'].touched)
+            }"
+          />
+          <label>Password</label>
+        </span>
+        <div
+          *ngIf="
+            f['password']?.invalid &&
+            (f['password'].dirty || f['password'].touched)
+          "
+        >
+          <small *ngIf="true" id="username2-help" class="p-error block"
+            >Password is required.</small
+          >
+        </div>
+      </div>
+
+      <ngx-recaptcha2 #captchaElem [siteKey]="siteKey"
+      formControlName="recaptcha"
+      > </ngx-recaptcha2>
+
+      <div class="remember-me-forgot">
+        <div class="field-radiobutton">
+          <p-radioButton
+            name="city"
+            value="Chicago"
+            inputId="city1"
+          ></p-radioButton>
+          <label for="city1">Remember me</label>
+        </div>
+
+        <div class="forget-password" routerLink="/forgot">Forgot password</div>
+      </div>
+
+      <button type="submit" pButton pRipple>Login</button>
+
+      <div class="seprator">
+        <span class="seprator-left"></span>
+        <span class="seprator-text">or create account</span>
+        <span class="seprator-right"></span>
+      </div>
+
+      <button type="submit" pButton routerLink="/register">
+        Create Account
+      </button>
+    </form>
+  </div>
+
+</div>
